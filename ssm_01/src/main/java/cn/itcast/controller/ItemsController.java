@@ -10,32 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-/*@Controller
-public class ItemsController {
-    @Autowired
-    private ItemsService itemsService;
 
-    @Test
-    public void test(){
-
-
-        List<Items> byId = itemsService.findById(2);
-        System.out.println(byId);
-
-
-    }
-
-
-
-}*/
 @Controller
-@RequestMapping("/items/")
+@RequestMapping("/items")
 public class ItemsController {
     @Autowired
-    private
-    ItemsService itemsService;// 展示商品信息页面@RequestMapping("/showItem")
-
-    public String showItem(int id, Model model) {
+    private ItemsService itemsService;// 展示商品信息页面@RequestMapping("/showItem")
+    @RequestMapping("/user")
+    public String showItem(Integer id, Model model) {
        List<Items>  items = itemsService.findById(id);
         model.addAttribute("item", items);
         return "viewItem";

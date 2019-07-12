@@ -12,7 +12,7 @@ class ItemsServiceimp implements ItemsService {
     @Autowired
     private ItemDao itemDao;
 
-    public List<Items> findById(int id) {
+    public List<Items> findById(Integer id) {
 
         return itemDao.findById(id);
     }

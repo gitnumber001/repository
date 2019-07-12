@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ItemsService {
 
-    List<Items> findById(int id);
+    List<Items> findById(Integer id);
 }
